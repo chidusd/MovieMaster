@@ -1,13 +1,34 @@
 package pageClasses;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.WebElement;
 
-public class HomePage {
+import common.BasePage;
+
+public class HomePage extends BasePage {
+	
 	WebDriver driver;
-
-	public HomePage(WebDriver driver) {
+	
+	public HomePage(WebDriver driver){
 		this.driver = driver;
-		PageFactory.initElements(driver, this);
 	}
+	
+		private WebElement SearchBar = getWebElement(driver, By.id("navbar-query"));
+		private WebElement SearchSubmitButton = getWebElement(driver, By.cssSelector("div[class='magnifyingglass navbarSprite']"));
+		
+		public void inputTextToSearchBar(String SearchQuery){
+			
+			SearchBar.clear();
+			SearchBar.sendKeys(SearchQuery);
+		}
+		
+		public void submitSearchQuery(){
+			SearchSubmitButton.click();
+		}
+	
+		public void navigateToHomePage(){
+			driver.get("http://www.imdb.com/");
+		}
+				
 }
