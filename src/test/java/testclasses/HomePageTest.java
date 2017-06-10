@@ -14,5 +14,4 @@ public class HomePageTest extends BaseTest {
 		homePage.inputTextToSearchBar("John Wick");;
 		homePage.submitSearchQuery();
 	}
-
 }

@@ -11,9 +11,10 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
 public class BaseTest {
-	
+
 	protected WebDriver driver;
-	
+	BrowserActions actions;
+
 	@BeforeClass
 	public void launchBrowser(){
 		String systemOS = System.getProperty("os.name");
@@ -26,26 +27,26 @@ public class BaseTest {
 			driver.manage().window().maximize();
 			break;
 		default:
-			 SafariOptions safariOpts = new SafariOptions();
-			    DesiredCapabilities cap = DesiredCapabilities.safari();
+			SafariOptions safariOpts = new SafariOptions();
+			DesiredCapabilities cap = DesiredCapabilities.safari();
 
-			    safariOpts.setUseCleanSession(true);
-			    cap.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
-			    cap.setCapability(CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR, "dismiss");
-			    cap.setCapability(SafariOptions.CAPABILITY, safariOpts);
-			    cap.setBrowserName("safari");
-			    cap.setPlatform(Platform.MAC);
+			safariOpts.setUseCleanSession(true);
+			cap.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
+			cap.setCapability(CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR, "dismiss");
+			cap.setCapability(SafariOptions.CAPABILITY, safariOpts);
+			cap.setBrowserName("safari");
+			cap.setPlatform(Platform.MAC);
 			driver = new SafariDriver(cap);
 			driver.manage().window().maximize();
 			break;
 		}
-	
+
 	}
-	
+
 	@AfterClass
 	public void quitBrowser(WebDriver driver){
 		driver = this.driver;
 		driver.quit();
 	}
-	
+
 }

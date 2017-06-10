@@ -1,34 +1,38 @@
 package pageClasses;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 
 import common.BasePage;
+import common.BrowserActions;
 
 public class HomePage extends BasePage {
 	
 	WebDriver driver;
+	BrowserActions actions;
+	
+	@FindBy(id = "navbar-query")
+	private WebElement searchBar;
+	
+	@FindBy(css = "div[class='magnifyingglass navbarSprite']")
+	private WebElement searchSubmitButton;
 	
 	public HomePage(WebDriver driver){
+		super(driver);
 		this.driver = driver;
 	}
-	
-		private WebElement SearchBar = getWebElement(driver, By.id("navbar-query"));
-		private WebElement SearchSubmitButton = getWebElement(driver, By.cssSelector("div[class='magnifyingglass navbarSprite']"));
-		
-		public void inputTextToSearchBar(String SearchQuery){
-			
-			SearchBar.clear();
-			SearchBar.sendKeys(SearchQuery);
-		}
-		
-		public void submitSearchQuery(){
-			SearchSubmitButton.click();
-		}
-	
-		public void navigateToHomePage(){
-			driver.get("http://www.imdb.com/");
-		}
+
+	public void inputTextToSearchBar(String searchQuery){
+		actions.clearAndSendKeysToElement(searchBar, searchQuery);
+	}
+
+	public void submitSearchQuery(){
+		searchSubmitButton.click();
+	}
+
+	public void navigateToHomePage(){
+		actions.getUrl("http://www.imdb.com/");
+	}
 				
 }

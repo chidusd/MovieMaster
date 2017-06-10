@@ -5,15 +5,18 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.safari.SafariDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
+import org.openqa.selenium.support.PageFactory;
 
 public class BasePage {
 		
 	public WebDriver driver;
+	protected BrowserActions actions;
+	
+	public BasePage(WebDriver driver){
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
+		actions = new BrowserActions(driver);
+	}
 	
 	public enum Identifier {
 	    ID, CSS, LINKTEXT, CLASSNAME,
