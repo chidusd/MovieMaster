@@ -10,19 +10,13 @@ import org.openqa.selenium.support.PageFactory;
 public class BasePage {
 		
 	public WebDriver driver;
-	protected BrowserActions actions;
+	public BrowserActions actions;
 	
 	public BasePage(WebDriver driver){
-		this.driver = driver;
+		driver = this.driver;
 		PageFactory.initElements(driver, this);
 		actions = new BrowserActions(driver);
 	}
-	
-	public enum Identifier {
-	    ID, CSS, LINKTEXT, CLASSNAME,
-	    NAME, PARTIAL, TAGNAME, XPATH 
-	}
-		
 	
 	public WebElement getWebElement(WebDriver driver, By object){
 	

@@ -12,17 +12,17 @@ import org.testng.annotations.BeforeClass;
 
 public class BaseTest {
 
-	protected WebDriver driver;
-	BrowserActions actions;
+	public WebDriver driver;
 
 	@BeforeClass
 	public void launchBrowser(){
-		String systemOS = System.getProperty("os.name");
+		System.out.println(System.getProperty("user.dir"));
+		String systemOS = System.getProperty("os.name").toLowerCase();
 		switch (systemOS) {
-		case "Windows 8.1":
-		case "Windows 8":
-		case "Windows 10":
-			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "//lib//chromedriver.exe");
+		case "windows 8.1":
+		case "windows 8":
+		case "windows 10":
+			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\lib\\chromedriver.exe");
 			driver = new ChromeDriver();
 			driver.manage().window().maximize();
 			break;
@@ -40,7 +40,6 @@ public class BaseTest {
 			driver.manage().window().maximize();
 			break;
 		}
-
 	}
 
 	@AfterClass

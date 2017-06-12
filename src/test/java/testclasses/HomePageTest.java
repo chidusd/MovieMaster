@@ -1,9 +1,11 @@
 package testclasses;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import common.BaseTest;
 import pageClasses.HomePage;
+
+import common.BaseTest;
 
 public class HomePageTest extends BaseTest {
 
@@ -13,5 +15,6 @@ public class HomePageTest extends BaseTest {
 		homePage.navigateToHomePage();
 		homePage.inputTextToSearchBar("John Wick");;
 		homePage.submitSearchQuery();
+		Assert.assertEquals("http://www.imdb.com/find?ref_=nv_sr_fn&q=John+Wick&s=all", driver.getCurrentUrl());
 	}
 }
