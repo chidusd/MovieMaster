@@ -1,8 +1,11 @@
 package pageClasses;
 
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.FindBys;
 
 import common.BasePage;
 import common.BrowserActions;
@@ -24,6 +27,12 @@ public class HomePage extends BasePage {
 	@FindBy(css = "div[class='magnifyingglass navbarSprite']")
 	private WebElement searchSubmitButton;	
 	
+	@FindBys( {
+		   @FindBy(className = "result_text")
+		} )
+	private List<WebElement> SearchResults;
+	
+	
 	public void inputTextToSearchBar(String searchQuery){
 		actions.clearAndSendKeysToElement(searchBar, searchQuery);
 	}
@@ -35,5 +44,9 @@ public class HomePage extends BasePage {
 	public void navigateToHomePage(){
 		actions.getUrl("http://www.imdb.com/");
 	}
+	
+	public void clickSearchResult(){
+		SearchResults.get(0).click();
+	}		
 				
 }
