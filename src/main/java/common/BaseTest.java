@@ -15,8 +15,7 @@ public class BaseTest {
 	public WebDriver driver;
 
 	@BeforeClass
-	public void launchBrowser(){
-		System.out.println(System.getProperty("user.dir"));
+	public void launchBrowser(){		
 		String systemOS = System.getProperty("os.name").toLowerCase();
 		switch (systemOS) {
 		case "windows 8.1":
@@ -43,8 +42,7 @@ public class BaseTest {
 	}
 
 	@AfterClass
-	public void quitBrowser(WebDriver driver){
-		driver = this.driver;
+	public void quitBrowser(){
 		driver.quit();
 	}
 

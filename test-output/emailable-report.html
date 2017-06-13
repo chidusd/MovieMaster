@@ -31,55 +31,14 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <body>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em">Default test</td><td class="numi">0</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">13.6 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">Default test</td><td class="numi">1</td><td class="numi">1</td><td class="numi">0</td><td class="numi">0</td><td class="numi">19.2 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="passed" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
-<tr><th colspan="4">Default test &#8212; failed (configuration methods)</th></tr>
-<tr class="failedodd"><td rowspan="1">testclasses.HomePageTest</td><td><a href="#m1"><b>quitBrowser</b>  </a></td><td class="numi">1</td><td>1497272170182</td><td class="numi">0</td></tr>
-<tr><th colspan="4">Default test &#8212; failed</th></tr>
-<tr class="failedodd"><td rowspan="1">testclasses.HomePageTest</td><td><a href="#m2"><b>performSearchFunction</b>  </a></td><td class="numi">1</td><td>1497272163886</td><td class="numi">6289</td></tr>
+<tr><th colspan="4">Default test &#8212; passed</th></tr>
+<tr class="passedodd"><td rowspan="1">testclasses.HomePageTest</td><td><a href="#m1"><b>performSearchFunction</b>  </a></td><td class="numi">1</td><td>1497348539985</td><td class="numi">12136</td></tr>
 </table>
 <h1>Default test</h1>
-<h2 id="m1">testclasses.HomePageTest:quitBrowser</h2>
-<div style="padding-left:3em">
-<p>
-Method quitBrowser requires 1 parameters but 0 were supplied in the @Configuration annotation.</p>
-org.testng.internal.Parameters.checkParameterTypes(Parameters.java:198)
-<br/>at org.testng.internal.Parameters.createParameters(Parameters.java:134)
-<br/>at org.testng.internal.Parameters.createParameters(Parameters.java:370)
-<br/>at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:86)
-<br/>at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:199)
-<br/>at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
-<br/>at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:225)
-<br/>at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:114)
-<br/>at org.testng.TestRunner.privateRun(TestRunner.java:767)
-<br/>at org.testng.TestRunner.run(TestRunner.java:617)
-<br/>at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-<br/>at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-<br/>at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-<br/>at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-<br/>at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-<br/>at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-<br/>at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-<br/>at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-<br/>at org.testng.TestNG.run(TestNG.java:1031)
-<br/>at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-<br/>at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
-<br/>at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
-<br/>1 lines not shown
-</div>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m2">testclasses.HomePageTest:performSearchFunction</h2>
-<div style="padding-left:3em">
-<p>null</p>
-org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-<br/>at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-<br/>at com.sun.proxy.$Proxy7.clear(Unknown Source)
-<br/>at common.BrowserActions.clearAndSendKeysToElement(BrowserActions.java:24)
-<br/>at pageClasses.HomePage.inputTextToSearchBar(HomePage.java:28)
-<br/>at testclasses.HomePageTest.performSearchFunction(HomePageTest.java:16)
-<br/>25 lines not shown
-</div>
+<h2 id="m1">testclasses.HomePageTest:performSearchFunction</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>
