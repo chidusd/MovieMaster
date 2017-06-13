@@ -1,6 +1,7 @@
 package testclasses;
 
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import pageClasses.HomePage;
@@ -16,6 +17,6 @@ public class Search_And_Open_Movie_Detail_Page extends BaseTest {
 		homePage.inputTextToSearchBar("Mad max");;
 		homePage.submitSearchQuery();
 		homePage.clickSearchResult();
-		//Assert.assertEquals(driver.getCurrentUrl(), "http://www.imdb.com/title/tt2911666/?ref_=fn_al_tt_1");
+		Assert.assertEquals(driver.getCurrentUrl(), "http://www.imdb.com/find?ref_=nv_sr_fn&q=Mad+max&s=all","Expected Result does not match with the actual result");
 	}
 }
