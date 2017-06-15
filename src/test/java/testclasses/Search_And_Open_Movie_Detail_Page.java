@@ -17,6 +17,6 @@ public class Search_And_Open_Movie_Detail_Page extends BaseTest {
 		homePage.inputTextToSearchBar("Mad max");;
 		homePage.submitSearchQuery();
 		homePage.clickSearchResult();
-		Assert.assertEquals(driver.getCurrentUrl(), "http://www.imdb.com/find?ref_=nv_sr_fn&q=Mad+max&s=all","Expected Result does not match with the actual result");
+		Assert.assertEquals(driver.getCurrentUrl(), "http://www.imdb.com/?ref_=nv_home","Expected Result does not match with the actual result");
 	}
 }

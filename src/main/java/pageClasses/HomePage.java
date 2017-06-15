@@ -21,7 +21,7 @@ public class HomePage extends BasePage {
 		this.actions = new BrowserActions(driver);
 		}
 	
-	@FindBy(css = "input[id='navbar-query']")
+	@FindBy(id = "navbar-query")
 	private WebElement searchBar;
 	
 	@FindBy(css = "div[class='magnifyingglass navbarSprite']")
@@ -31,6 +31,29 @@ public class HomePage extends BasePage {
 		   @FindBy(className = "result_text")
 		} )
 	private List<WebElement> SearchResults;
+		
+	@FindBy(css = "a[href='/title/tt0079501/fullcredits?ref_=tt_ql_1']")
+	private WebElement FullCastLink;
+	
+	@FindBy(id = "nblogin")
+	private WebElement SigninOptions;
+	
+	@FindBys({
+		@FindBy(className = "list-group-item")
+	})
+	private List<WebElement> SignInOptions;
+	
+	@FindBy(id = "ap_email")
+	private WebElement UserID;
+	
+	@FindBy(id = "ap_password")
+	private WebElement PasswordField;
+	
+	@FindBy(id = "signInSubmit")
+	private WebElement SubmitSignIn;
+	
+	@FindBy(css = "a[href='/user/ur52276441/?ref_=nb_usr_prof_0']")
+	private WebElement SignedInUserName;
 	
 	
 	public void inputTextToSearchBar(String searchQuery){
@@ -47,6 +70,30 @@ public class HomePage extends BasePage {
 	
 	public void clickSearchResult(){
 		SearchResults.get(0).click();
-	}		
+	}	
+	
+	public void showFullCast(){
+		FullCastLink.click();
+	}
+	
+	public void click_On_Sign_In_Options(){
+		SigninOptions.click();
+	}
+	
+	public void click_On_SignIn_With_IMDB(){
+		SignInOptions.get(3).click();
+	}
+	
+	public void user_SignIn_To_IMDB(String UserName, String Password){
+		UserID.sendKeys(UserName);
+		PasswordField.sendKeys(Password);
+		SubmitSignIn.click();
+	}
+	
+	public String get_Signed_In_User_Name(){
+		return SignedInUserName.getText();
+	}
+	
+	
 				
 }
