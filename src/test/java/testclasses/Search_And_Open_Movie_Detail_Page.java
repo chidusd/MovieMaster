@@ -19,6 +19,6 @@ public class Search_And_Open_Movie_Detail_Page extends BaseTest {
 		homePage.submitSearchQuery();
 		homePage.clickSearchResult();
 		Movie_Detail_Page movieDetailPage = new Movie_Detail_Page(driver);
-		assertTrue(movieDetailPage.display_Movie_Name().toLowerCase().contains(SearchQuery.toLowerCase()));
+		assertTrue(movieDetailPage.get_Movie_Name().toLowerCase().contains(SearchQuery.toLowerCase()));
 	}
 }

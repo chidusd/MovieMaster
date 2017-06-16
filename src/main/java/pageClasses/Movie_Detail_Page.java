@@ -1,7 +1,6 @@
 package pageClasses;
 
-import java.util.NoSuchElementException;
-
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -28,7 +27,10 @@ public class Movie_Detail_Page extends BasePage{
 	@FindBy(css = "a[itemprop='trailer']")
 	private WebElement MovieTrailerImage;
 	
-	public String display_Movie_Name() {
+	@FindBy(css = "span[itemprop='ratingValue']")
+	private WebElement MovieRatingBar;
+	
+	public String get_Movie_Name() {
 		return MovieName.getText();
 	}
 	
@@ -44,5 +46,19 @@ public class Movie_Detail_Page extends BasePage{
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			System.out.println("No Trailer Was Found For This Movie!!");
 		}
+	}
+	
+	public double get_Movie_Rating(){
+		
+		double MovieRating = 0.0;
+		try {
+			String RatingInText = MovieRatingBar.getText();
+			MovieRating =  Double.parseDouble(RatingInText);
+			return MovieRating;
+		} catch (NoSuchElementException e) {
+			System.out.println("Ratings are not available for this movie");
+			return MovieRating;
+		}
+		
 	}
 }

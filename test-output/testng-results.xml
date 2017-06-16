@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="22227" started-at="2017-06-16T10:15:43Z" finished-at="2017-06-16T10:16:05Z">
+  <suite name="Default suite" duration-ms="38364" started-at="2017-06-16T11:22:47Z" finished-at="2017-06-16T11:23:26Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="22227" started-at="2017-06-16T10:15:43Z" finished-at="2017-06-16T10:16:05Z">
-      <class name="testclasses.Play_Movie_Trailer">
-        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:testclasses.Play_Movie_Trailer@26653222]" name="launchBrowser" is-config="true" duration-ms="5783" started-at="2017-06-16T15:45:43Z" finished-at="2017-06-16T15:45:49Z">
+    <test name="Default test" duration-ms="38364" started-at="2017-06-16T11:22:47Z" finished-at="2017-06-16T11:23:26Z">
+      <class name="testclasses.Compare_Movies_By_Rating">
+        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:testclasses.Compare_Movies_By_Rating@26653222]" name="launchBrowser" is-config="true" duration-ms="9375" started-at="2017-06-16T16:52:47Z" finished-at="2017-06-16T16:52:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="play_Movie_Trailer()[pri:0, instance:testclasses.Play_Movie_Trailer@26653222]" name="play_Movie_Trailer" duration-ms="14907" started-at="2017-06-16T15:45:49Z" finished-at="2017-06-16T15:46:04Z">
+        <test-method status="PASS" signature="compare_Movies_By_Rating()[pri:0, instance:testclasses.Compare_Movies_By_Rating@26653222]" name="compare_Movies_By_Rating" duration-ms="26314" started-at="2017-06-16T16:52:57Z" finished-at="2017-06-16T16:53:23Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- play_Movie_Trailer -->
-        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:testclasses.Play_Movie_Trailer@26653222]" name="quitBrowser" is-config="true" duration-ms="1505" started-at="2017-06-16T15:46:04Z" finished-at="2017-06-16T15:46:05Z">
+        </test-method> <!-- compare_Movies_By_Rating -->
+        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:testclasses.Compare_Movies_By_Rating@26653222]" name="quitBrowser" is-config="true" duration-ms="2644" started-at="2017-06-16T16:53:23Z" finished-at="2017-06-16T16:53:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitBrowser -->
-      </class> <!-- testclasses.Play_Movie_Trailer -->
+      </class> <!-- testclasses.Compare_Movies_By_Rating -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

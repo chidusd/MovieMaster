@@ -2,9 +2,10 @@ package testclasses;
 
 import org.testng.annotations.Test;
 
-import common.BaseTest;
 import pageClasses.Home_Page;
 import pageClasses.Movie_Detail_Page;
+
+import common.BaseTest;
 
 public class Play_Movie_Trailer extends BaseTest {
 	
