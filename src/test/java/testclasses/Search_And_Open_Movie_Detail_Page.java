@@ -11,7 +11,7 @@ import common.BaseTest;
 public class Search_And_Open_Movie_Detail_Page extends BaseTest {
 
 	@Test
-	public void search_And_Open_Movie_Detail_Page(){
+	public void search_And_Open_Movie_Detail_Page() throws InterruptedException{
 		String SearchQuery = "wonder woman";
 		Home_Page homePage = new Home_Page(driver);
 		homePage.navigateToHomePage();	
@@ -19,6 +19,7 @@ public class Search_And_Open_Movie_Detail_Page extends BaseTest {
 		homePage.submitSearchQuery();
 		homePage.clickSearchResult();
 		Movie_Detail_Page movieDetailPage = new Movie_Detail_Page(driver);
+		Thread.sleep(6000);
 		assertTrue(movieDetailPage.get_Movie_Name().toLowerCase().contains(SearchQuery.toLowerCase()));
 	}
 }

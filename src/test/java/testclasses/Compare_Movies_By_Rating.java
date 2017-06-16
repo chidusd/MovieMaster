@@ -12,8 +12,8 @@ public class Compare_Movies_By_Rating extends BaseTest {
 		@Test	
 		public void compare_Movies_By_Rating(){
 			
-			String FirstMovie = "The Shawshank Redemption";
-			String SecondMovie = "Game Of Thrones";
+			String FirstMovie = "Schindler's List";
+			String SecondMovie = "pulp fiction";
 			double RatingFirstMovie;
 			double RatingSecondMovie; 
 			Home_Page homePage = new Home_Page(driver);
@@ -39,7 +39,7 @@ public class Compare_Movies_By_Rating extends BaseTest {
 				System.out.println("\n"+MovieSecond.toUpperCase() + " has higher ratings than "+ MovieFirst.toUpperCase());
 			}
 			else if(FirstValue == SecondValue){
-				System.out.println("Both the movies have same ratings!!");
+				System.out.println("\nBoth the movies have same rating!!");
 			}
 		}
 
