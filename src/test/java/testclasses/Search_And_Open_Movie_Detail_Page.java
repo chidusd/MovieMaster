@@ -1,22 +1,25 @@
 package testclasses;
 
-import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
+import static org.testng.Assert.assertTrue;
+
 import org.testng.annotations.Test;
 
-import pageClasses.HomePage;
-
+import pageClasses.Home_Page;
+import pageClasses.Movie_Detail_Page;
 import common.BaseTest;
 
 public class Search_And_Open_Movie_Detail_Page extends BaseTest {
 
 	@Test
 	public void search_And_Open_Movie_Detail_Page(){
-		HomePage homePage = PageFactory.initElements(driver, HomePage.class);
+		String SearchQuery = "wonder woman";
+		Home_Page homePage = new Home_Page(driver);
 		homePage.navigateToHomePage();	
-		homePage.inputTextToSearchBar("Mad max");;
+		homePage.inputTextToSearchBar(SearchQuery.toLowerCase());
 		homePage.submitSearchQuery();
 		homePage.clickSearchResult();
-		Assert.assertEquals(driver.getCurrentUrl(), "http://www.imdb.com/?ref_=nv_home","Expected Result does not match with the actual result");
+		Movie_Detail_Page movieDetailPage = new Movie_Detail_Page(driver);
+		System.out.println(movieDetailPage.display_Movie_Name());
+		assertTrue(movieDetailPage.display_Movie_Name().toLowerCase().contains(SearchQuery.toLowerCase()));
 	}
 }

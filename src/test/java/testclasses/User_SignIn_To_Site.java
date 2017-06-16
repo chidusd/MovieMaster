@@ -4,7 +4,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import pageClasses.HomePage;
+import pageClasses.Home_Page;
 
 import common.BaseTest;
 
@@ -12,7 +12,7 @@ public class User_SignIn_To_Site extends BaseTest{
 
 	@Test
 	public void sign_In_With_IMDB(){
-		HomePage homePage = PageFactory.initElements(driver, HomePage.class);
+		Home_Page homePage = PageFactory.initElements(driver, Home_Page.class);
 		homePage.navigateToHomePage();	
 		homePage.click_On_Sign_In_Options();
 		homePage.click_On_SignIn_With_IMDB();

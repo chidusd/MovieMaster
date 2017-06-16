@@ -6,19 +6,21 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.FindBys;
+import org.openqa.selenium.support.PageFactory;
 
 import common.BasePage;
 import common.BrowserActions;
 
-public class HomePage extends BasePage {
+public class Home_Page extends BasePage {
 	
 	WebDriver driver;
 	BrowserActions actions;
 	
-	public HomePage(WebDriver driver){
+	public Home_Page(WebDriver driver){
 		super(driver);
 		this.driver = driver;	
 		this.actions = new BrowserActions(driver);
+		PageFactory.initElements(driver, this);
 		}
 	
 	@FindBy(id = "navbar-query")
@@ -27,11 +29,15 @@ public class HomePage extends BasePage {
 	@FindBy(css = "div[class='magnifyingglass navbarSprite']")
 	private WebElement searchSubmitButton;	
 	
-	@FindBys( {
-		   @FindBy(className = "result_text")
-		} )
+	
+   // @FindBy(css = "img[src='https://images-na.ssl-images-amazon.com/images/M/MV5BMTM4Mjg5ODEzMV5BMl5BanBnXkFtZTcwMDc3NDk0NA@@._V1_UX32_CR0,0,32,44_AL_.jpg']")
+	//private WebElement SearchResult;
+	
+	@FindBys({ 
+		@FindBy(className = "primary_photo") 
+		})
 	private List<WebElement> SearchResults;
-		
+	
 	@FindBy(css = "a[href='/title/tt0079501/fullcredits?ref_=tt_ql_1']")
 	private WebElement FullCastLink;
 	
