@@ -8,16 +8,15 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
 
-import common.BasePage;
 import common.BrowserActions;
+import common.IHomePage;
 
-public class Home_Page extends BasePage {
+public class Home_Page implements IHomePage {
 	
 	WebDriver driver;
 	BrowserActions actions;
 	
 	public Home_Page(WebDriver driver){
-		super(driver);
 		this.driver = driver;	
 		this.actions = new BrowserActions(driver);
 		PageFactory.initElements(driver, this);
