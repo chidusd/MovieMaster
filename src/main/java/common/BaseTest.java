@@ -3,6 +3,7 @@ package common;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.safari.SafariDriver;
@@ -22,7 +23,9 @@ public class BaseTest {
 		case "windows 8":
 		case "windows 10":
 			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\lib\\chromedriver.exe");
-			driver = new ChromeDriver();
+			ChromeOptions options = new ChromeOptions(); 
+			options.addArguments("disable-infobars"); 
+			driver = new ChromeDriver(options);
 			driver.manage().window().maximize();
 			break;
 		default:

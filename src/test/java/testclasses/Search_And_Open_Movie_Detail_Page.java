@@ -12,7 +12,7 @@ public class Search_And_Open_Movie_Detail_Page extends BaseTest {
 
 	@Test
 	public void search_And_Open_Movie_Detail_Page() throws InterruptedException{
-		String SearchQuery = "wonder woman";
+		String SearchQuery = "game of thrones";
 		Home_Page homePage = new Home_Page(driver);
 		homePage.navigateToHomePage();	
 		homePage.inputTextToSearchBar(SearchQuery.toLowerCase());
