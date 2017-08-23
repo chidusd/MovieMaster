@@ -11,7 +11,7 @@ public class Play_Movie_Trailer extends BaseTest {
 	
 	@Test
 	public void play_Movie_Trailer() throws InterruptedException{
-		String SearchQuery = "wonder woman";
+		String SearchQuery = "inception";
 		Home_Page homePage = new Home_Page(driver);
 		homePage.navigateToHomePage();	
 		homePage.inputTextToSearchBar(SearchQuery.toLowerCase());
