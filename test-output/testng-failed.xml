@@ -3,12 +3,11 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="testclasses.Create_New_Account_And_Login">
+      <class name="testclasses.Simple">
         <methods>
-          <include name="launchBrowser"/>
-          <include name="CreateNewAccount"/>
+          <include name="main2"/>
         </methods>
-      </class> <!-- testclasses.Create_New_Account_And_Login -->
+      </class> <!-- testclasses.Simple -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
