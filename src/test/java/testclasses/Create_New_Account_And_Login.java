@@ -10,7 +10,7 @@ import pageClasses.Create_New_Account;
 public class Create_New_Account_And_Login extends BaseTest {
 	
 	private String UserName = "Chidambar";
-	private String UserEmail = "6t64erf5@mailinator.com";
+	private String UserEmail = "6t64eytr@mailinator.com";
 	private String Password = "test123456";
 	
 @Test	
