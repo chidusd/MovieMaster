@@ -2,18 +2,17 @@ package testclasses;
 
 import org.testng.annotations.Test;
 
+import common.BaseTest;
 import pageClasses.Home_Page;
 import pageClasses.Movie_Detail_Page;
-
-import common.BaseTest;
 
 public class Compare_Movies_By_Rating extends BaseTest {
 	
 		@Test	
 		public void compare_Movies_By_Rating(){
 			
-			String FirstMovie = "equillibrium 2002";
-			String SecondMovie = "fantastic beasts 2016";
+			String FirstMovie = "The avengers";
+			String SecondMovie = "captain america Civil war";
 			double RatingFirstMovie;
 			double RatingSecondMovie; 
 			Home_Page homePage = new Home_Page(driver);
@@ -33,13 +32,13 @@ public class Compare_Movies_By_Rating extends BaseTest {
 		
 		public void compare_Double_Values(double FirstValue, double SecondValue, String MovieFirst, String MovieSecond){
 			if(FirstValue > SecondValue){
-				System.out.println("\n"+MovieFirst.toUpperCase() + " has higher ratings than "+ MovieSecond.toUpperCase());
+				System.out.println("\n"+MovieFirst.toUpperCase() + " has higher ratings than "+ MovieSecond.toUpperCase()+"\n\n");
 			}
 			else if(FirstValue < SecondValue){
-				System.out.println("\n"+MovieSecond.toUpperCase() + " has higher ratings than "+ MovieFirst.toUpperCase());
+				System.out.println("\n"+MovieSecond.toUpperCase() + " has higher ratings than "+ MovieFirst.toUpperCase()+"\n\n");
 			}
 			else if(FirstValue == SecondValue){
-				System.out.println("\nBoth the movies have same rating!!");
+				System.out.println("\nBoth the movies have same rating!!\n\n");
 			}
 		}
 

@@ -10,15 +10,15 @@ import pageClasses.Create_New_Account;
 public class Create_New_Account_And_Login extends BaseTest {
 	
 	private String UserName = "Chidambar";
-	private String UserEmail = "6t64eytr@mailinator.com";
+	private String UserEmail = "mynewmail1432@mailinator.com";
 	private String Password = "test123456";
+
 	
 @Test	
 public void CreateNewAccount() throws InterruptedException {
 	Create_New_Account createAccount = new Create_New_Account(driver);
 	createAccount.NavigateToCreateAccountPage(driver);
 	createAccount.EnterAccountDetailsAndSubmit(UserName,UserEmail,Password);
-	driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-}
-	
+	driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);	
+	}
 }

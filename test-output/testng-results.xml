@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="57482" started-at="2017-08-30T12:32:25Z" finished-at="2017-08-30T12:33:22Z">
+  <suite name="Default suite" duration-ms="24813" started-at="2017-09-01T10:20:03Z" finished-at="2017-09-01T10:20:28Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="57482" started-at="2017-08-30T12:32:25Z" finished-at="2017-08-30T12:33:22Z">
-      <class name="testclasses.Play_Movie_Trailer">
-        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:testclasses.Play_Movie_Trailer@26653222]" name="launchBrowser" is-config="true" duration-ms="7741" started-at="2017-08-30T18:02:25Z" finished-at="2017-08-30T18:02:32Z">
+    <test name="Default test" duration-ms="24813" started-at="2017-09-01T10:20:03Z" finished-at="2017-09-01T10:20:28Z">
+      <class name="testclasses.User_SignIn_To_Site">
+        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:testclasses.User_SignIn_To_Site@26653222]" name="launchBrowser" is-config="true" duration-ms="5874" started-at="2017-09-01T15:50:03Z" finished-at="2017-09-01T15:50:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="play_Movie_Trailer()[pri:0, instance:testclasses.Play_Movie_Trailer@26653222]" name="play_Movie_Trailer" duration-ms="47667" started-at="2017-08-30T18:02:32Z" finished-at="2017-08-30T18:03:20Z">
+        <test-method status="PASS" signature="sign_In_With_IMDB()[pri:0, instance:testclasses.User_SignIn_To_Site@26653222]" name="sign_In_With_IMDB" duration-ms="17167" started-at="2017-09-01T15:50:09Z" finished-at="2017-09-01T15:50:26Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- play_Movie_Trailer -->
-        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:testclasses.Play_Movie_Trailer@26653222]" name="quitBrowser" is-config="true" duration-ms="2044" started-at="2017-08-30T18:03:20Z" finished-at="2017-08-30T18:03:22Z">
+        </test-method> <!-- sign_In_With_IMDB -->
+        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:testclasses.User_SignIn_To_Site@26653222]" name="quitBrowser" is-config="true" duration-ms="1741" started-at="2017-09-01T15:50:26Z" finished-at="2017-09-01T15:50:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitBrowser -->
-      </class> <!-- testclasses.Play_Movie_Trailer -->
+      </class> <!-- testclasses.User_SignIn_To_Site -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
