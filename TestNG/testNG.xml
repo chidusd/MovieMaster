@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Demo_suite" verbose="10" >
-  <test name="Login_test" >
+<suite name="Demo_suite" verbose="4"  preserve-order="true">
+  <test name="General_test" >
   	<classes>
-      <class name="testclasses.HomePageTest"/>
+      <class name="testclasses.Compare_Movies_By_Rating"/>
+      <class name="testclasses.Search_And_Open_Movie_Detail_Page"/>
+      <class name="testclasses.Play_Movie_Trailer"/>
     </classes>
  </test>
 </suite>

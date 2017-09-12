@@ -1,29 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="25286" started-at="2017-09-12T13:03:41Z" finished-at="2017-09-12T13:04:06Z">
+  <suite name="Demo_suite" duration-ms="110129" started-at="2017-09-12T13:24:14Z" finished-at="2017-09-12T13:26:04Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="25286" started-at="2017-09-12T13:03:41Z" finished-at="2017-09-12T13:04:06Z">
-      <class name="testclasses.Search_And_Open_Movie_Detail_Page">
-        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:testclasses.Search_And_Open_Movie_Detail_Page@68c4039c]" name="launchBrowser" is-config="true" duration-ms="6390" started-at="2017-09-12T18:33:41Z" finished-at="2017-09-12T18:33:47Z">
+    <test name="Login_test" duration-ms="110129" started-at="2017-09-12T13:24:14Z" finished-at="2017-09-12T13:26:04Z">
+      <class name="testclasses.Compare_Movies_By_Rating">
+        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:testclasses.Compare_Movies_By_Rating@6a41eaa2]" name="launchBrowser" is-config="true" duration-ms="7294" started-at="2017-09-12T18:54:14Z" finished-at="2017-09-12T18:54:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="goToHomePage()[pri:0, instance:testclasses.Search_And_Open_Movie_Detail_Page@68c4039c]" name="goToHomePage" is-config="true" duration-ms="6641" started-at="2017-09-12T18:33:47Z" finished-at="2017-09-12T18:33:54Z">
+        <test-method status="PASS" signature="goToHomePage()[pri:0, instance:testclasses.Compare_Movies_By_Rating@6a41eaa2]" name="goToHomePage" is-config="true" duration-ms="5896" started-at="2017-09-12T18:54:21Z" finished-at="2017-09-12T18:54:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToHomePage -->
-        <test-method status="PASS" signature="search_And_Open_Movie_Detail_Page()[pri:0, instance:testclasses.Search_And_Open_Movie_Detail_Page@68c4039c]" name="search_And_Open_Movie_Detail_Page" duration-ms="10298" started-at="2017-09-12T18:33:54Z" finished-at="2017-09-12T18:34:04Z">
+        <test-method status="PASS" signature="compare_Movies_By_Rating()[pri:0, instance:testclasses.Compare_Movies_By_Rating@6a41eaa2]" name="compare_Movies_By_Rating" duration-ms="20908" started-at="2017-09-12T18:54:27Z" finished-at="2017-09-12T18:54:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- compare_Movies_By_Rating -->
+        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:testclasses.Compare_Movies_By_Rating@6a41eaa2]" name="quitBrowser" is-config="true" duration-ms="2158" started-at="2017-09-12T18:54:48Z" finished-at="2017-09-12T18:54:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitBrowser -->
+      </class> <!-- testclasses.Compare_Movies_By_Rating -->
+      <class name="testclasses.Search_And_Open_Movie_Detail_Page">
+        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:testclasses.Search_And_Open_Movie_Detail_Page@685cb137]" name="launchBrowser" is-config="true" duration-ms="4977" started-at="2017-09-12T18:54:50Z" finished-at="2017-09-12T18:54:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="goToHomePage()[pri:0, instance:testclasses.Search_And_Open_Movie_Detail_Page@685cb137]" name="goToHomePage" is-config="true" duration-ms="6316" started-at="2017-09-12T18:54:55Z" finished-at="2017-09-12T18:55:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToHomePage -->
+        <test-method status="PASS" signature="search_And_Open_Movie_Detail_Page()[pri:0, instance:testclasses.Search_And_Open_Movie_Detail_Page@685cb137]" name="search_And_Open_Movie_Detail_Page" duration-ms="10874" started-at="2017-09-12T18:55:02Z" finished-at="2017-09-12T18:55:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- search_And_Open_Movie_Detail_Page -->
-        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:testclasses.Search_And_Open_Movie_Detail_Page@68c4039c]" name="quitBrowser" is-config="true" duration-ms="1919" started-at="2017-09-12T18:34:04Z" finished-at="2017-09-12T18:34:06Z">
+        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:testclasses.Search_And_Open_Movie_Detail_Page@685cb137]" name="quitBrowser" is-config="true" duration-ms="1645" started-at="2017-09-12T18:55:13Z" finished-at="2017-09-12T18:55:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitBrowser -->
       </class> <!-- testclasses.Search_And_Open_Movie_Detail_Page -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="testclasses.Play_Movie_Trailer">
+        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:testclasses.Play_Movie_Trailer@59f99ea]" name="launchBrowser" is-config="true" duration-ms="4889" started-at="2017-09-12T18:55:14Z" finished-at="2017-09-12T18:55:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="goToHomePage()[pri:0, instance:testclasses.Play_Movie_Trailer@59f99ea]" name="goToHomePage" is-config="true" duration-ms="6292" started-at="2017-09-12T18:55:19Z" finished-at="2017-09-12T18:55:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToHomePage -->
+        <test-method status="PASS" signature="play_Movie_Trailer()[pri:0, instance:testclasses.Play_Movie_Trailer@59f99ea]" name="play_Movie_Trailer" duration-ms="37267" started-at="2017-09-12T18:55:25Z" finished-at="2017-09-12T18:56:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- play_Movie_Trailer -->
+        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:testclasses.Play_Movie_Trailer@59f99ea]" name="quitBrowser" is-config="true" duration-ms="1576" started-at="2017-09-12T18:56:03Z" finished-at="2017-09-12T18:56:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitBrowser -->
+      </class> <!-- testclasses.Play_Movie_Trailer -->
+    </test> <!-- Login_test -->
+  </suite> <!-- Demo_suite -->
 </testng-results>
