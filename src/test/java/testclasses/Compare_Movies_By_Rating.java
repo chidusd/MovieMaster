@@ -11,8 +11,8 @@ public class Compare_Movies_By_Rating extends BaseTest {
 		@Test	
 		public void compare_Movies_By_Rating(){
 			
-			String FirstMovie = "The avengers";
-			String SecondMovie = "captain america Civil war";
+			String FirstMovie = "House of cards";
+			String SecondMovie = "Dexter";
 			double RatingFirstMovie;
 			double RatingSecondMovie; 
 			Home_Page homePage = new Home_Page(driver);

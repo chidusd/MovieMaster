@@ -4,8 +4,8 @@ import java.util.List;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
 
 import common.BasePage;
@@ -29,9 +29,7 @@ public class Home_Page extends BasePage {
 	@FindBy(css = "div[class='magnifyingglass navbarSprite']")
 	private WebElement searchSubmitButton;	
 	
-	@FindBys({ 
-		@FindBy(className = "primary_photo") 
-		})
+	@FindBy(className = "primary_photo") 
 	private List<WebElement> SearchResults;
 	
 	@FindBy(css = "a[href='/title/tt0079501/fullcredits?ref_=tt_ql_1']")
@@ -40,9 +38,7 @@ public class Home_Page extends BasePage {
 	@FindBy(id = "nblogin")
 	private WebElement SigninOptions;
 	
-	@FindBys({
-		@FindBy(className = "list-group-item")
-	})
+	@FindBy(className = "list-group-item")
 	private List<WebElement> SignInOptions;
 	
 	@FindBy(id = "ap_email")
@@ -57,7 +53,13 @@ public class Home_Page extends BasePage {
 	@FindBy(css = "a[href='/user/ur52276441/?ref_=nb_usr_prof_0']")
 	private WebElement SignedInUserName;
 	
+	@FindBy(css = "li[id='navUserMenu']")
+	private WebElement AccountDropDown;
 	
+	@FindBy(css = "a[href='/user/ur52276441/ratings?ref_=nv_usr_rt_4']")
+	private WebElement YourRatings;
+
+
 	public void inputTextToSearchBar(String searchQuery){
 		actions.clearAndSendKeysToElement(searchBar, searchQuery);
 	}
@@ -94,6 +96,14 @@ public class Home_Page extends BasePage {
 	
 	public String get_Signed_In_User_Name(){
 		return SignedInUserName.getText();
+	}
+	
+	public void open_Your_Ratings() throws InterruptedException {
+		Actions actions = new Actions(driver);
+		actions.moveToElement(AccountDropDown).perform();
+		Thread.sleep(500);
+		actions.moveToElement(YourRatings).perform();
+		YourRatings.click();
 	}
 	
 	

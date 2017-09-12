@@ -38,7 +38,7 @@ public class Movie_Detail_Page extends BasePage{
 		try {
 			if(MovieTrailerImage.isDisplayed() == true){
 				MovieTrailerImage.click();
-				Thread.sleep(20000);
+				Thread.sleep(25000);
 			}
 			else{
 				System.out.println("Movie Trailer is not present!!");

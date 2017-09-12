@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="24813" started-at="2017-09-01T10:20:03Z" finished-at="2017-09-01T10:20:28Z">
+  <suite name="Default suite" duration-ms="33121" started-at="2017-09-12T10:21:34Z" finished-at="2017-09-12T10:22:07Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="24813" started-at="2017-09-01T10:20:03Z" finished-at="2017-09-01T10:20:28Z">
-      <class name="testclasses.User_SignIn_To_Site">
-        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:testclasses.User_SignIn_To_Site@26653222]" name="launchBrowser" is-config="true" duration-ms="5874" started-at="2017-09-01T15:50:03Z" finished-at="2017-09-01T15:50:09Z">
+    <test name="Default test" duration-ms="33121" started-at="2017-09-12T10:21:34Z" finished-at="2017-09-12T10:22:07Z">
+      <class name="testclasses.Login_And_Your_Ratings">
+        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:testclasses.Login_And_Your_Ratings@26653222]" name="launchBrowser" is-config="true" duration-ms="7207" started-at="2017-09-12T15:51:34Z" finished-at="2017-09-12T15:51:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="sign_In_With_IMDB()[pri:0, instance:testclasses.User_SignIn_To_Site@26653222]" name="sign_In_With_IMDB" duration-ms="17167" started-at="2017-09-01T15:50:09Z" finished-at="2017-09-01T15:50:26Z">
+        <test-method status="PASS" signature="loginAndYourRatings()[pri:0, instance:testclasses.Login_And_Your_Ratings@26653222]" name="loginAndYourRatings" duration-ms="24020" started-at="2017-09-12T15:51:41Z" finished-at="2017-09-12T15:52:05Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- sign_In_With_IMDB -->
-        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:testclasses.User_SignIn_To_Site@26653222]" name="quitBrowser" is-config="true" duration-ms="1741" started-at="2017-09-01T15:50:26Z" finished-at="2017-09-01T15:50:28Z">
+        </test-method> <!-- loginAndYourRatings -->
+        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:testclasses.Login_And_Your_Ratings@26653222]" name="quitBrowser" is-config="true" duration-ms="1868" started-at="2017-09-12T15:52:05Z" finished-at="2017-09-12T15:52:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitBrowser -->
-      </class> <!-- testclasses.User_SignIn_To_Site -->
+      </class> <!-- testclasses.Login_And_Your_Ratings -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

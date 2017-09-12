@@ -15,7 +15,7 @@ public class Play_Movie_Trailer extends BaseTest {
 	
 	@Test
 	public void play_Movie_Trailer() throws Exception{
-		String SearchQuery = "krish 3";
+		String SearchQuery = "ray donovan";
 		Home_Page homePage = new Home_Page(driver);
 		homePage.navigateToHomePage();	
 		homePage.inputTextToSearchBar(SearchQuery.toLowerCase());
@@ -30,7 +30,7 @@ public class Play_Movie_Trailer extends BaseTest {
 	public void getscreenshot() throws Exception 
     {
 			File file = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-			FileUtils.copyFile(file, new File("D:\\screenshotNew.png"));
+			FileUtils.copyFile(file, new File(System.getProperty("user.dir") + "\\lib\\NewImage.png"));
     }
 
 }
