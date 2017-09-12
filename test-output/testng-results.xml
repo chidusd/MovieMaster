@@ -2,24 +2,28 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="33121" started-at="2017-09-12T10:21:34Z" finished-at="2017-09-12T10:22:07Z">
+  <suite name="Default suite" duration-ms="32561" started-at="2017-09-12T12:41:56Z" finished-at="2017-09-12T12:42:29Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="33121" started-at="2017-09-12T10:21:34Z" finished-at="2017-09-12T10:22:07Z">
-      <class name="testclasses.Login_And_Your_Ratings">
-        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:testclasses.Login_And_Your_Ratings@26653222]" name="launchBrowser" is-config="true" duration-ms="7207" started-at="2017-09-12T15:51:34Z" finished-at="2017-09-12T15:51:41Z">
+    <test name="Default test" duration-ms="32561" started-at="2017-09-12T12:41:56Z" finished-at="2017-09-12T12:42:29Z">
+      <class name="testclasses.User_SignIn_To_Site">
+        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:testclasses.User_SignIn_To_Site@68c4039c]" name="launchBrowser" is-config="true" duration-ms="10259" started-at="2017-09-12T18:11:56Z" finished-at="2017-09-12T18:12:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="loginAndYourRatings()[pri:0, instance:testclasses.Login_And_Your_Ratings@26653222]" name="loginAndYourRatings" duration-ms="24020" started-at="2017-09-12T15:51:41Z" finished-at="2017-09-12T15:52:05Z">
+        <test-method status="PASS" signature="goToHomePage()[pri:0, instance:testclasses.User_SignIn_To_Site@68c4039c]" name="goToHomePage" is-config="true" duration-ms="7292" started-at="2017-09-12T18:12:07Z" finished-at="2017-09-12T18:12:14Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginAndYourRatings -->
-        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:testclasses.Login_And_Your_Ratings@26653222]" name="quitBrowser" is-config="true" duration-ms="1868" started-at="2017-09-12T15:52:05Z" finished-at="2017-09-12T15:52:07Z">
+        </test-method> <!-- goToHomePage -->
+        <test-method status="PASS" signature="sign_In_With_IMDB()[pri:0, instance:testclasses.User_SignIn_To_Site@68c4039c]" name="sign_In_With_IMDB" duration-ms="12382" started-at="2017-09-12T18:12:14Z" finished-at="2017-09-12T18:12:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sign_In_With_IMDB -->
+        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:testclasses.User_SignIn_To_Site@68c4039c]" name="quitBrowser" is-config="true" duration-ms="2597" started-at="2017-09-12T18:12:26Z" finished-at="2017-09-12T18:12:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitBrowser -->
-      </class> <!-- testclasses.Login_And_Your_Ratings -->
+      </class> <!-- testclasses.User_SignIn_To_Site -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

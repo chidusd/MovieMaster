@@ -31,6 +31,7 @@ public class Movie_Detail_Page extends BasePage{
 	private WebElement MovieRatingBar;
 	
 	public String get_Movie_Name() {
+		actions.applyExplicitWaitForElementToBeClickable(MovieName);
 		return MovieName.getText();
 	}
 	

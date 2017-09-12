@@ -17,7 +17,6 @@ public class Play_Movie_Trailer extends BaseTest {
 	public void play_Movie_Trailer() throws Exception{
 		String SearchQuery = "ray donovan";
 		Home_Page homePage = new Home_Page(driver);
-		homePage.navigateToHomePage();	
 		homePage.inputTextToSearchBar(SearchQuery.toLowerCase());
 		homePage.submitSearchQuery();
 		homePage.clickSearchResult();

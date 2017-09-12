@@ -16,7 +16,6 @@ public class Compare_Movies_By_Rating extends BaseTest {
 			double RatingFirstMovie;
 			double RatingSecondMovie; 
 			Home_Page homePage = new Home_Page(driver);
-			homePage.navigateToHomePage();	
 			homePage.inputTextToSearchBar(FirstMovie.toLowerCase());
 			homePage.submitSearchQuery();
 			homePage.clickSearchResult();

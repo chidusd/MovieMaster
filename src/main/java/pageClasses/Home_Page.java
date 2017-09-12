@@ -98,12 +98,12 @@ public class Home_Page extends BasePage {
 		return SignedInUserName.getText();
 	}
 	
+	@SuppressWarnings("deprecation")
 	public void open_Your_Ratings() throws InterruptedException {
 		Actions actions = new Actions(driver);
-		actions.moveToElement(AccountDropDown).perform();
-		Thread.sleep(500);
-		actions.moveToElement(YourRatings).perform();
+		actions.moveToElement(AccountDropDown).pause(10000).moveToElement(YourRatings).build().perform();
 		YourRatings.click();
+		actions.pause(10000).perform();
 	}
 	
 	
