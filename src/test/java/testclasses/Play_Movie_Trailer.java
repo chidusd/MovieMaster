@@ -8,14 +8,17 @@ import org.openqa.selenium.TakesScreenshot;
 import org.testng.annotations.Test;
 
 import common.BaseTest;
+import common.MyProperties;
 import pageClasses.Home_Page;
 import pageClasses.Movie_Detail_Page;
 
 public class Play_Movie_Trailer extends BaseTest {
 	
+	MyProperties prop = new MyProperties();
+	
 	@Test
 	public void play_Movie_Trailer() throws Exception{
-		String SearchQuery = "ray donovan";
+		String SearchQuery = prop.getProperty("searchquery1");
 		Home_Page homePage = new Home_Page(driver);
 		homePage.inputTextToSearchBar(SearchQuery.toLowerCase());
 		homePage.submitSearchQuery();

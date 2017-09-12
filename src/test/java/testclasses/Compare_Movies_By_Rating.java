@@ -1,18 +1,23 @@
 package testclasses;
 
+import java.io.IOException;
+
 import org.testng.annotations.Test;
 
 import common.BaseTest;
+import common.MyProperties;
 import pageClasses.Home_Page;
 import pageClasses.Movie_Detail_Page;
 
 public class Compare_Movies_By_Rating extends BaseTest {
 	
+		MyProperties prop = new MyProperties();
+	
 		@Test	
-		public void compare_Movies_By_Rating(){
+		public void compare_Movies_By_Rating() throws IOException{
 			
-			String FirstMovie = "House of cards";
-			String SecondMovie = "Dexter";
+			String FirstMovie = prop.getProperty("searchquery1");
+			String SecondMovie = prop.getProperty("searchquery2");
 			double RatingFirstMovie;
 			double RatingSecondMovie; 
 			Home_Page homePage = new Home_Page(driver);

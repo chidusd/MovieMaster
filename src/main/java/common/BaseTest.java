@@ -1,5 +1,7 @@
 package common;
 
+import java.io.IOException;
+
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -15,6 +17,8 @@ import org.testng.annotations.BeforeMethod;
 public class BaseTest {
 
 	public WebDriver driver;
+	
+	MyProperties prop = new MyProperties();
 
 	@BeforeClass
 	public void launchBrowser(){		
@@ -46,8 +50,8 @@ public class BaseTest {
 	}
 	
 	@BeforeMethod
-	public void goToHomePage() {
-		driver.get("http://www.imdb.com/");
+	public void goToHomePage() throws IOException {
+		driver.get(prop.getProperty("url"));
 	}
 
 	@AfterClass

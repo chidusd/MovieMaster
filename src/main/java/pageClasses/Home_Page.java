@@ -101,9 +101,9 @@ public class Home_Page extends BasePage {
 	@SuppressWarnings("deprecation")
 	public void open_Your_Ratings() throws InterruptedException {
 		Actions actions = new Actions(driver);
-		actions.moveToElement(AccountDropDown).pause(10000).moveToElement(YourRatings).build().perform();
+		actions.moveToElement(AccountDropDown).pause(4000).moveToElement(YourRatings).build().perform();
 		YourRatings.click();
-		actions.pause(10000).perform();
+		actions.pause(4000).perform();
 	}
 	
 	
