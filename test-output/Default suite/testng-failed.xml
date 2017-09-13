@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="testclasses.New_Movies_In_Theatre">
+      <class name="testclasses.Browse_Celebrity_Photos">
         <methods>
           <include name="quitBrowser"/>
+          <include name="browseCelebrityPhotos"/>
           <include name="launchBrowser"/>
-          <include name="getCurrentMoviesInTheatre"/>
           <include name="goToHomePage"/>
         </methods>
-      </class> <!-- testclasses.New_Movies_In_Theatre -->
+      </class> <!-- testclasses.Browse_Celebrity_Photos -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
