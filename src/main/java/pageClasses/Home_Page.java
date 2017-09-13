@@ -64,6 +64,9 @@ public class Home_Page extends BasePage {
 	
 	@FindBy(css = "a[href='/movies-in-theaters/?ref_=nv_mv_inth_1']")
 	private WebElement MoviesInTheatre;
+	
+	@FindBy(css = "img[class='pri_image']")
+	private List<WebElement> WidgetImage;
 
 	public void inputTextToSearchBar(String searchQuery){
 		actions.clearAndSendKeysToElement(searchBar, searchQuery);
@@ -118,6 +121,10 @@ public class Home_Page extends BasePage {
 		action.pause(2000);
 		action.moveToElement(MoviesInTheatre).perform();
 		MoviesInTheatre.click();
+	}
+	
+	public void clickOnWidgetImage() {
+		WidgetImage.get(4).click();
 	}
 	
 	
