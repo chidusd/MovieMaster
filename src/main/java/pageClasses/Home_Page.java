@@ -58,7 +58,12 @@ public class Home_Page extends BasePage {
 	
 	@FindBy(css = "a[href='/user/ur52276441/ratings?ref_=nv_usr_rt_4']")
 	private WebElement YourRatings;
-
+	
+	@FindBy(css = "li[id='navTitleMenu']")
+	private WebElement NavigationBar;
+	
+	@FindBy(css = "a[href='/movies-in-theaters/?ref_=nv_mv_inth_1']")
+	private WebElement MoviesInTheatre;
 
 	public void inputTextToSearchBar(String searchQuery){
 		actions.clearAndSendKeysToElement(searchBar, searchQuery);
@@ -104,6 +109,15 @@ public class Home_Page extends BasePage {
 		actions.moveToElement(AccountDropDown).pause(4000).moveToElement(YourRatings).build().perform();
 		YourRatings.click();
 		actions.pause(4000).perform();
+	}
+	
+	@SuppressWarnings("deprecation")
+	public void hoverOnNavigationBar() {
+		Actions action = new Actions(driver);
+		action.moveToElement(NavigationBar).perform();
+		action.pause(2000);
+		action.moveToElement(MoviesInTheatre).perform();
+		MoviesInTheatre.click();
 	}
 	
 	

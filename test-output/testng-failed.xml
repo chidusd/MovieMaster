@@ -1,24 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite verbose="2" name="Failed suite [Demo_suite]">
-  <test name="Login_test(failed)">
+<suite name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
-      <class name="testclasses.Search_And_Open_Movie_Detail_Page">
+      <class name="testclasses.New_Movies_In_Theatre">
         <methods>
-          <include name="search_And_Open_Movie_Detail_Page"/>
-        </methods>
-      </class> <!-- testclasses.Search_And_Open_Movie_Detail_Page -->
-      <class name="testclasses.Play_Movie_Trailer">
-        <methods>
-          <include name="play_Movie_Trailer"/>
-        </methods>
-      </class> <!-- testclasses.Play_Movie_Trailer -->
-      <class name="testclasses.Compare_Movies_By_Rating">
-        <methods>
+          <include name="quitBrowser"/>
           <include name="launchBrowser"/>
-          <include name="compare_Movies_By_Rating"/>
+          <include name="getCurrentMoviesInTheatre"/>
+          <include name="goToHomePage"/>
         </methods>
-      </class> <!-- testclasses.Compare_Movies_By_Rating -->
+      </class> <!-- testclasses.New_Movies_In_Theatre -->
     </classes>
-  </test> <!-- Login_test(failed) -->
-</suite> <!-- Failed suite [Demo_suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
