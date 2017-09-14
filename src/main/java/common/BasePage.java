@@ -15,7 +15,7 @@ public class BasePage {
 	
 	@SuppressWarnings("deprecation")
 	public void waitTimer(WebDriver driver,  long TimeInSeconds) {
-		Actions act = new Actions(driver); 
+		Actions act = new Actions(driver);
 		act.pause(TimeInSeconds).perform();
 	}
 	

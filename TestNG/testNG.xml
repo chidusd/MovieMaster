@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Demo_suite" verbose="4"  preserve-order="true">
+<suite name="Demo_suite" verbose="2"  preserve-order="true">
   <test name="General_test" >
   	<classes>
       <class name="testclasses.Create_New_Account_And_Login"/>
