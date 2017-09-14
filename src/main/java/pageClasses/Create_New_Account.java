@@ -48,6 +48,7 @@ public class Create_New_Account extends BasePage {
 		UserPassword.sendKeys(password);
 		UserPasswordCheck.sendKeys(password);
 		CreateAccountButton.click();
+		waitTimer(driver, 5000);
 	}
 
 }

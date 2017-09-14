@@ -12,8 +12,8 @@ public class Browse_Celebrity_Photos extends BaseTest{
 	public void browseCelebrityPhotos() throws InterruptedException {
 		Home_Page homePage = new Home_Page(driver);
 		homePage.clickOnWidgetImage();
-		Thread.sleep(2000);
 		CelebrityImagePage CI = new CelebrityImagePage(driver);
+		CI.clickOnFirstImage();
 		CI.browseCelebrityPhotos();
 	}
 

@@ -27,13 +27,12 @@ public class Movies_In_Theatre extends BasePage {
 		}
 	}
 	
-	@SuppressWarnings("deprecation")
 	public void browseAllMoviesInTheatre() throws InterruptedException {
 		Actions actions = new Actions(driver);
 		for(int i=0; i< AllMovies.size(); i++) {
 			actions.moveToElement(AllMovies.get(i)).perform();
-			actions.pause(1000);
+			waitTimer(driver, 2000);
 		}
-		Thread.sleep(4000);
+		waitTimer(driver, 2000);
 	}
 }

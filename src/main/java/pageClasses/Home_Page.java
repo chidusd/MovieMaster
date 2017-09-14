@@ -111,20 +111,20 @@ public class Home_Page extends BasePage {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(AccountDropDown).pause(4000).moveToElement(YourRatings).build().perform();
 		YourRatings.click();
-		actions.pause(4000).perform();
+		waitTimer(driver, 5000);
 	}
 	
-	@SuppressWarnings("deprecation")
 	public void hoverOnNavigationBar() {
 		Actions action = new Actions(driver);
 		action.moveToElement(NavigationBar).perform();
-		action.pause(2000);
+		waitTimer(driver, 2000);
 		action.moveToElement(MoviesInTheatre).perform();
 		MoviesInTheatre.click();
 	}
 	
 	public void clickOnWidgetImage() {
-		WidgetImage.get(4).click();
+		WidgetImage.get(3).click();
+		waitTimer(driver, 2000);
 	}
 	
 	
