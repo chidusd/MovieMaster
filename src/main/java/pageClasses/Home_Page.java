@@ -32,9 +32,6 @@ public class Home_Page extends BasePage {
 	@FindBy(className = "primary_photo") 
 	private List<WebElement> SearchResults;
 	
-	@FindBy(css = "a[href='/title/tt0079501/fullcredits?ref_=tt_ql_1']")
-	private WebElement FullCastLink;
-	
 	@FindBy(id = "nblogin")
 	private WebElement SigninOptions;
 	
@@ -83,10 +80,6 @@ public class Home_Page extends BasePage {
 	public void clickSearchResult(){
 		SearchResults.get(0).click();
 	}	
-	
-	public void showFullCast(){
-		FullCastLink.click();
-	}
 	
 	public void click_On_Sign_In_Options(){
 		SigninOptions.click();
