@@ -1,5 +1,7 @@
 package pageClasses;
 
+import java.util.List;
+
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -29,6 +31,12 @@ public class Movie_Detail_Page extends BasePage{
 	
 	@FindBy(css = "span[itemprop='ratingValue']")
 	private WebElement MovieRatingBar;
+	
+	@FindBy(css = "span[class='star-rating-text']")
+	private WebElement NoRating;
+	
+	@FindBy(css = ".star-rating-value")
+	private List<WebElement> RatingGivenByUser;
 	
 	public String get_Movie_Name() {
 		actions.applyExplicitWaitForElementToBeClickable(MovieName);
@@ -61,5 +69,17 @@ public class Movie_Detail_Page extends BasePage{
 			return MovieRating;
 		}
 		
+	}
+	
+	public boolean isMovieNotRated() {
+		return NoRating.isDisplayed();
+	}
+	
+	public boolean isMovieRated() {
+		return RatingGivenByUser.get(0).isDisplayed();
+	}
+	
+	public double getRatingGivenByUser() {
+		return Double.parseDouble(RatingGivenByUser.get(0).getText());
 	}
 }
