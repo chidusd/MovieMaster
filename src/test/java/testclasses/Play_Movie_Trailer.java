@@ -33,7 +33,7 @@ public class Play_Movie_Trailer extends BaseTest {
 	public void getscreenshot() throws Exception 
     {
 			File file = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-			FileUtils.copyFile(file, new File(System.getProperty("user.dir") + "\\lib\\NewImage.png"));
+			FileUtils.copyFile(file, new File(System.getProperty("user.dir") + "\\Screenshots\\NewImage.png"));
     }
 
 }
