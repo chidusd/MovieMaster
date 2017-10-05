@@ -19,18 +19,18 @@ public class Movies_In_Theatre extends BasePage {
 	}
 
 	@FindBy(css = "h4[itemprop='name']")
-	private List<WebElement> AllMovies;
+	private List<WebElement> allMovies;
 	
 	public void getAllMovieTitles() {
-		for(int i=0; i< AllMovies.size(); i++) {
-			System.out.println(AllMovies.get(i).getText());
+		for(int i=0; i< allMovies.size(); i++) {
+			System.out.println(allMovies.get(i).getText());
 		}
 	}
 	
 	public void browseAllMoviesInTheatre() throws InterruptedException {
 		Actions actions = new Actions(driver);
-		for(int i=0; i< AllMovies.size(); i++) {
-			actions.moveToElement(AllMovies.get(i)).perform();
+		for(int i=0; i< allMovies.size(); i++) {
+			actions.moveToElement(allMovies.get(i)).perform();
 			waitTimer(driver, 2000);
 		}
 		waitTimer(driver, 2000);

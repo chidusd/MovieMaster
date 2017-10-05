@@ -30,40 +30,40 @@ public class Home_Page extends BasePage {
 	private WebElement searchSubmitButton;	
 	
 	@FindBy(className = "primary_photo") 
-	private List<WebElement> SearchResults;
+	private List<WebElement> searchResults;
 	
 	@FindBy(id = "nblogin")
-	private WebElement SigninOptions;
+	private WebElement signinOptions;
 	
 	@FindBy(className = "list-group-item")
-	private List<WebElement> SignInOptions;
+	private List<WebElement> signInOptions;
 	
 	@FindBy(id = "ap_email")
-	private WebElement UserID;
+	private WebElement userID;
 	
 	@FindBy(id = "ap_password")
-	private WebElement PasswordField;
+	private WebElement passwordField;
 	
 	@FindBy(id = "signInSubmit")
-	private WebElement SubmitSignIn;
+	private WebElement submitSignIn;
 	
 	@FindBy(css = "a[href='/user/ur52276441/?ref_=nb_usr_prof_0']")
-	private WebElement SignedInUserName;
+	private WebElement signedInUserName;
 	
 	@FindBy(css = "li[id='navUserMenu']")
-	private WebElement AccountDropDown;
+	private WebElement accountDropDown;
 	
 	@FindBy(css = "a[href='/user/ur52276441/ratings?ref_=nv_usr_rt_4']")
-	private WebElement YourRatings;
+	private WebElement yourRatings;
 	
 	@FindBy(css = "li[id='navTitleMenu']")
-	private WebElement NavigationBar;
+	private WebElement navigationBar;
 	
 	@FindBy(css = "a[href='/movies-in-theaters/?ref_=nv_mv_inth_1']")
-	private WebElement MoviesInTheatre;
+	private WebElement moviesInTheatre;
 	
 	@FindBy(css = "img[class='pri_image']")
-	private List<WebElement> WidgetImage;
+	private List<WebElement> widgetImage;
 
 	public void inputTextToSearchBar(String searchQuery){
 		actions.clearAndSendKeysToElement(searchBar, searchQuery);
@@ -78,45 +78,45 @@ public class Home_Page extends BasePage {
 	}
 	
 	public void clickSearchResult(){
-		SearchResults.get(0).click();
+		searchResults.get(0).click();
 	}	
 	
 	public void click_On_Sign_In_Options(){
-		SigninOptions.click();
+		signinOptions.click();
 	}
 	
 	public void click_On_SignIn_With_IMDB(){
-		SignInOptions.get(3).click();
+		signInOptions.get(3).click();
 	}
 	
 	public void user_SignIn_To_IMDB(String UserName, String Password){
-		UserID.sendKeys(UserName);
-		PasswordField.sendKeys(Password);
-		SubmitSignIn.click();
+		userID.sendKeys(UserName);
+		passwordField.sendKeys(Password);
+		submitSignIn.click();
 	}
 	
 	public String get_Signed_In_User_Name(){
-		return SignedInUserName.getText();
+		return signedInUserName.getText();
 	}
 	
 	@SuppressWarnings("deprecation")
 	public void open_Your_Ratings() throws InterruptedException {
 		Actions actions = new Actions(driver);
-		actions.moveToElement(AccountDropDown).pause(4000).moveToElement(YourRatings).build().perform();
-		YourRatings.click();
+		actions.moveToElement(accountDropDown).pause(4000).moveToElement(yourRatings).build().perform();
+		yourRatings.click();
 		waitTimer(driver, 5000);
 	}
 	
 	public void hoverOnNavigationBar() {
 		Actions action = new Actions(driver);
-		action.moveToElement(NavigationBar).perform();
+		action.moveToElement(navigationBar).perform();
 		waitTimer(driver, 2000);
-		action.moveToElement(MoviesInTheatre).perform();
-		MoviesInTheatre.click();
+		action.moveToElement(moviesInTheatre).perform();
+		moviesInTheatre.click();
 	}
 	
 	public void clickOnWidgetImage() {
-		WidgetImage.get(3).click();
+		widgetImage.get(3).click();
 		waitTimer(driver, 2000);
 	}
 	

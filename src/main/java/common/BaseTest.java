@@ -19,9 +19,18 @@ public class BaseTest {
 	public WebDriver driver;
 	
 	MyProperties prop = new MyProperties();
-
+	
 	@BeforeClass
-	public void launchBrowser(){		
+	public void launchBrowser(){	
+		
+		//System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "\\lib\\geckodriver.exe");
+		/*nodeURL = "http://10.55.0.16:5666/wd/hub";
+		DesiredCapabilities capability = DesiredCapabilities.firefox();
+		capability.setBrowserName("firefox");
+		capability.setPlatform(Platform.WIN8_1);
+		driver = new RemoteWebDriver(capability);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);*/
+		
 		String systemOS = System.getProperty("os.name").toLowerCase();
 		switch (systemOS) {
 		case "windows 8.1":

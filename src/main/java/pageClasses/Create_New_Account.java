@@ -22,19 +22,19 @@ public class Create_New_Account extends BasePage {
 	}
 	
 	@FindBy(id = "ap_customer_name")
-	private WebElement UserName;
+	private WebElement userName;
 	
 	@FindBy(id = "ap_email")
-	private WebElement UserEmail;
+	private WebElement userEmail;
 	
 	@FindBy(id = "ap_password")
-	private WebElement UserPassword;
+	private WebElement userPassword;
 	
 	@FindBy(id = "ap_password_check")
-	private WebElement UserPasswordCheck;
+	private WebElement userPasswordCheck;
 	
 	@FindBy(css = "input[id='continue']")
-	private WebElement CreateAccountButton;
+	private WebElement createAccountButton;
 	
 	public void NavigateToCreateAccountPage(WebDriver driver) {
 		driver.get("https://www.imdb.com/registration/signin");
@@ -42,12 +42,12 @@ public class Create_New_Account extends BasePage {
 		element.click();
 	}
 	
-	public void EnterAccountDetailsAndSubmit(String Name, String Email, String password) throws InterruptedException {
-		UserName.sendKeys(Name);
-		UserEmail.sendKeys(Email);
-		UserPassword.sendKeys(password);
-		UserPasswordCheck.sendKeys(password);
-		CreateAccountButton.click();
+	public void enterAccountDetailsAndSubmit(String Name, String Email, String password) throws InterruptedException {
+		userName.sendKeys(Name);
+		userEmail.sendKeys(Email);
+		userPassword.sendKeys(password);
+		userPasswordCheck.sendKeys(password);
+		createAccountButton.click();
 		waitTimer(driver, 5000);
 	}
 

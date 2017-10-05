@@ -16,6 +16,6 @@ public class Create_New_Account_And_Login extends BaseTest {
 	public void CreateNewAccount() throws InterruptedException, IOException {
 		Create_New_Account createAccount = new Create_New_Account(driver);
 		createAccount.NavigateToCreateAccountPage(driver);
-		createAccount.EnterAccountDetailsAndSubmit(prop.getProperty("username"),prop.getProperty("newemail"),prop.getProperty("password"));
+		createAccount.enterAccountDetailsAndSubmit(prop.getProperty("username"),prop.getProperty("newemail"),prop.getProperty("password"));
 		}
 	}

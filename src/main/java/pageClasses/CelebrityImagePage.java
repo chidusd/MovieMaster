@@ -18,20 +18,23 @@ public class CelebrityImagePage extends BasePage{
 	}
 	
 	@FindBy(css = "button[class='pswp__button pswp__button--arrow--right']")
-	private WebElement ForwardButton;
+	private WebElement forwardButton;
+	
+	@FindBy(css = "button[class='pswp__button pswp__button--arrow--left']")
+	private WebElement backwardButton;
 	
 	@FindBy(css = "div[class='pswp__zoom-wrap']")
-	private List<WebElement> FirstImage;
+	private List<WebElement> firstImage;
 	
 	public void browseCelebrityPhotos() throws InterruptedException {
-		for(int i=0; i<25; i++) {
-			ForwardButton.click();
+		for(int i=0; i<10; i++) {
+			backwardButton.click();
 			waitTimer(driver, 2000);;
 		}
 	}
 	
 	public void clickOnFirstImage() {
-		FirstImage.get(1).click();
+		firstImage.get(1).click();
 	}
 
 }

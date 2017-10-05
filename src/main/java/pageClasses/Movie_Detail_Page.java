@@ -24,30 +24,30 @@ public class Movie_Detail_Page extends BasePage{
 		}
 	
 	@FindBy(css = "h1[itemprop='name']")
-	private WebElement MovieName;
+	private WebElement movieName;
 	
 	@FindBy(css = "a[itemprop='trailer']")
-	private WebElement MovieTrailerImage;
+	private WebElement movieTrailerImage;
 	
 	@FindBy(css = "span[itemprop='ratingValue']")
-	private WebElement MovieRatingBar;
+	private WebElement movieRatingBar;
 	
 	@FindBy(css = "span[class='star-rating-text']")
-	private WebElement NoRating;
+	private WebElement noRating;
 	
 	@FindBy(css = ".star-rating-value")
-	private List<WebElement> RatingGivenByUser;
+	private List<WebElement> ratingGivenByUser;
 	
 	public String get_Movie_Name() {
-		actions.applyExplicitWaitForElementToBeClickable(MovieName);
-		return MovieName.getText();
+		actions.applyExplicitWaitForElementToBeClickable(movieName);
+		return movieName.getText();
 	}
 	
 	public void play_Movie_Trailer() throws InterruptedException {
 		try {
-			if(MovieTrailerImage.isDisplayed() == true){
-				MovieTrailerImage.click();
-				waitTimer(driver, 25000);
+			if(movieTrailerImage.isDisplayed() == true){
+				movieTrailerImage.click();
+				waitTimer(driver, 30000);
 			}
 			else{
 				System.out.println("Movie Trailer is not present!!");
@@ -61,7 +61,7 @@ public class Movie_Detail_Page extends BasePage{
 		
 		double MovieRating = 0.0;
 		try {
-			String RatingInText = MovieRatingBar.getText();
+			String RatingInText = movieRatingBar.getText();
 			MovieRating =  Double.parseDouble(RatingInText);
 			return MovieRating;
 		} catch (NoSuchElementException e) {
@@ -72,14 +72,18 @@ public class Movie_Detail_Page extends BasePage{
 	}
 	
 	public boolean isMovieNotRated() {
-		return NoRating.isDisplayed();
+		boolean Result = false;
+		if(noRating.isDisplayed() == false || noRating.isEnabled() == false) {
+			Result = true;
+		}
+		return Result;
 	}
 	
 	public boolean isMovieRated() {
-		return RatingGivenByUser.get(0).isDisplayed();
+		return ratingGivenByUser.get(0).isDisplayed();
 	}
 	
 	public double getRatingGivenByUser() {
-		return Double.parseDouble(RatingGivenByUser.get(0).getText());
+		return Double.parseDouble(ratingGivenByUser.get(0).getText());
 	}
 }

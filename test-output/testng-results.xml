@@ -2,28 +2,28 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="44031" started-at="2017-09-14T13:20:44Z" finished-at="2017-09-14T13:21:29Z">
+  <suite name="Default suite" duration-ms="57443" started-at="2017-10-05T09:53:59Z" finished-at="2017-10-05T09:54:57Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="44031" started-at="2017-09-14T13:20:44Z" finished-at="2017-09-14T13:21:29Z">
-      <class name="testclasses.Rate_Unrated_Movie">
-        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:testclasses.Rate_Unrated_Movie@68c4039c]" name="launchBrowser" is-config="true" duration-ms="10294" started-at="2017-09-14T18:50:44Z" finished-at="2017-09-14T18:50:55Z">
+    <test name="Default test" duration-ms="57443" started-at="2017-10-05T09:53:59Z" finished-at="2017-10-05T09:54:57Z">
+      <class name="testclasses.Play_Movie_Trailer">
+        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:testclasses.Play_Movie_Trailer@68c4039c]" name="launchBrowser" is-config="true" duration-ms="6370" started-at="2017-10-05T15:23:59Z" finished-at="2017-10-05T15:24:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="goToHomePage()[pri:0, instance:testclasses.Rate_Unrated_Movie@68c4039c]" name="goToHomePage" is-config="true" duration-ms="6483" started-at="2017-09-14T18:50:55Z" finished-at="2017-09-14T18:51:01Z">
+        <test-method status="PASS" signature="goToHomePage()[pri:0, instance:testclasses.Play_Movie_Trailer@68c4039c]" name="goToHomePage" is-config="true" duration-ms="5743" started-at="2017-10-05T15:24:06Z" finished-at="2017-10-05T15:24:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToHomePage -->
-        <test-method status="PASS" signature="rateUnratedMovie()[pri:0, instance:testclasses.Rate_Unrated_Movie@68c4039c]" name="rateUnratedMovie" duration-ms="24910" started-at="2017-09-14T18:51:01Z" finished-at="2017-09-14T18:51:26Z">
+        <test-method status="PASS" signature="play_Movie_Trailer()[pri:0, instance:testclasses.Play_Movie_Trailer@68c4039c]" name="play_Movie_Trailer" duration-ms="43756" started-at="2017-10-05T15:24:11Z" finished-at="2017-10-05T15:24:55Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- rateUnratedMovie -->
-        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:testclasses.Rate_Unrated_Movie@68c4039c]" name="quitBrowser" is-config="true" duration-ms="2315" started-at="2017-09-14T18:51:26Z" finished-at="2017-09-14T18:51:29Z">
+        </test-method> <!-- play_Movie_Trailer -->
+        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:testclasses.Play_Movie_Trailer@68c4039c]" name="quitBrowser" is-config="true" duration-ms="1545" started-at="2017-10-05T15:24:55Z" finished-at="2017-10-05T15:24:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitBrowser -->
-      </class> <!-- testclasses.Rate_Unrated_Movie -->
+      </class> <!-- testclasses.Play_Movie_Trailer -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

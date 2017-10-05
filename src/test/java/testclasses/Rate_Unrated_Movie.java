@@ -2,6 +2,7 @@ package testclasses;
 
 import java.io.IOException;
 
+import org.openqa.selenium.NoSuchElementException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -25,12 +26,13 @@ public class Rate_Unrated_Movie extends BaseTest {
 		homePage.submitSearchQuery();
 		homePage.clickSearchResult();
 		Movie_Detail_Page movieDetailPage = new Movie_Detail_Page(driver);
+		
 		try {
 		if(movieDetailPage.isMovieNotRated()) {
 			System.out.println("\nThis movie is not been rated yet.");
 		}
 		}
-		catch(Exception NoSuchElementException) {
+		catch(NoSuchElementException e) {
 		if(movieDetailPage.isMovieRated()) {
 			System.out.println("\nThis movie has already been rated\n"+"User has rated this movie with "+movieDetailPage.getRatingGivenByUser()+" stars");
 		}
