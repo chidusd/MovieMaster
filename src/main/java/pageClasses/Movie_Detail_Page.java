@@ -30,13 +30,13 @@ public class Movie_Detail_Page extends BasePage{
 	private WebElement movieTrailerImage;
 	
 	@FindBy(css = "span[itemprop='ratingValue']")
-	private WebElement movieRatingBar;
-	
-	@FindBy(css = "span[class='star-rating-text']")
-	private WebElement noRating;
+	private WebElement overAllMovieRatingBar;
 	
 	@FindBy(css = ".star-rating-value")
 	private List<WebElement> ratingGivenByUser;
+	
+	@FindBy(css = "span[class='star-rating-star no-rating']")
+	private WebElement ratingWidget;
 	
 	public String get_Movie_Name() {
 		actions.applyExplicitWaitForElementToBeClickable(movieName);
@@ -57,33 +57,35 @@ public class Movie_Detail_Page extends BasePage{
 		}
 	}
 	
-	public double get_Movie_Rating(){
+	public double get_Overall_Movie_Rating(){
 		
 		double MovieRating = 0.0;
 		try {
-			String RatingInText = movieRatingBar.getText();
+			String RatingInText = overAllMovieRatingBar.getText();
 			MovieRating =  Double.parseDouble(RatingInText);
 			return MovieRating;
 		} catch (NoSuchElementException e) {
-			System.out.println("Ratings are not available for this movie");
+			System.out.println("Ratings are not available for this movie"+"\n"+ratingGivenByUser.get(1).getText());
 			return MovieRating;
 		}
 		
 	}
 	
-	public boolean isMovieNotRated() {
-		boolean Result = false;
-		if(noRating.isDisplayed() == false || noRating.isEnabled() == false) {
-			Result = true;
-		}
-		return Result;
-	}
-	
-	public boolean isMovieRated() {
-		return ratingGivenByUser.get(0).isDisplayed();
-	}
-	
 	public double getRatingGivenByUser() {
-		return Double.parseDouble(ratingGivenByUser.get(0).getText());
+		return Double.parseDouble(ratingGivenByUser.get(1).getText());
+	}
+	
+	public String isMovieRatedByUser() {
+	
+		String message = null;
+		try {
+			if(ratingWidget.isDisplayed()) {
+				message = "\nThis movie is not been rated by the user yet!!";
+			}
+		}
+		catch(NoSuchElementException e) {
+			message = "\nThis movie is already been rated by the user!!";
+		}
+		return message;
 	}
 }

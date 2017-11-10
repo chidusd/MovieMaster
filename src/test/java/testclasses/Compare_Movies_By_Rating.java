@@ -25,12 +25,12 @@ public class Compare_Movies_By_Rating extends BaseTest {
 			homePage.submitSearchQuery();
 			homePage.clickSearchResult();
 			Movie_Detail_Page movieDetailPage = new Movie_Detail_Page(driver);
-			RatingFirstMovie = movieDetailPage.get_Movie_Rating();
+			RatingFirstMovie = movieDetailPage.get_Overall_Movie_Rating();
 			homePage.inputTextToSearchBar(SecondMovie.toLowerCase());
 			homePage.submitSearchQuery();
 			homePage.clickSearchResult();
 			Movie_Detail_Page movieDetailPage_Second = new Movie_Detail_Page(driver);
-			RatingSecondMovie = movieDetailPage_Second.get_Movie_Rating();
+			RatingSecondMovie = movieDetailPage_Second.get_Overall_Movie_Rating();
 			compare_Double_Values(RatingFirstMovie, RatingSecondMovie, FirstMovie, SecondMovie);
 		}
 		

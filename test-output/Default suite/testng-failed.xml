@@ -3,12 +3,14 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="testclasses.Browse_Celebrity_Photos">
+      <class name="testclasses.Rate_Unrated_Movie">
         <methods>
-          <include name="browseCelebrityPhotos"/>
+          <include name="quitBrowser"/>
           <include name="launchBrowser"/>
+          <include name="goToHomePage"/>
+          <include name="rateUnratedMovie"/>
         </methods>
-      </class> <!-- testclasses.Browse_Celebrity_Photos -->
+      </class> <!-- testclasses.Rate_Unrated_Movie -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
