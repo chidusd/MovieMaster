@@ -34,9 +34,9 @@ public class BaseTest {
 		String systemOS = System.getProperty("os.name").toLowerCase();
 		switch (systemOS) {
 		case "windows 8.1":
-		case "windows 8":
+		case "windows 7":
 		case "windows 10":
-			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\lib\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\Properties\\chromedriver.exe");
 			ChromeOptions options = new ChromeOptions(); 
 			options.addArguments("disable-infobars"); 
 			driver = new ChromeDriver(options);

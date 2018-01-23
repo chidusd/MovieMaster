@@ -34,6 +34,6 @@ public class Search_And_Open_Movie_Detail_Page extends BaseTest {
     {
             File file = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
          //The below method will save the screen shot in d drive with name "screenshot.png"
-            FileUtils.copyFile(file, new File("D:\\screenshot.png"));
+            FileUtils.copyFile(file, new File("C:\\screenshot.png"));
     }
 }

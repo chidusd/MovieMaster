@@ -62,7 +62,7 @@ public class Home_Page extends BasePage {
 	@FindBy(css = "a[href='/movies-in-theaters/?ref_=nv_mv_inth_1']")
 	private WebElement moviesInTheatre;
 	
-	@FindBy(css = "img[class='pri_image']")
+	@FindBy(css = "img[src='https://images-na.ssl-images-amazon.com/images/M/MV5BMjMxNzM4MDE4MV5BMl5BanBnXkFtZTgwNjk4ODI2NDM@._CR435,122,1414,1059_UX614_UY460._SY230_SX307_AL_.jpg']")
 	private List<WebElement> widgetImage;
 
 	public void inputTextToSearchBar(String searchQuery){
@@ -116,7 +116,7 @@ public class Home_Page extends BasePage {
 	}
 	
 	public void clickOnWidgetImage() {
-		widgetImage.get(3).click();
+		widgetImage.get(0).click();
 		waitTimer(driver, 2000);
 	}
 	
