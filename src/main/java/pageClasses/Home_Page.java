@@ -116,11 +116,10 @@ public class Home_Page extends BasePage {
 	}
 	
 	public void clickOnWidgetImage() {
-		if(widgetImage.size() > 0) {
+		try {
 			widgetImage.get(0).click();
 			waitTimer(driver, 2000);
-		}
-		else {
+		} catch (ArrayIndexOutOfBoundsException e) {
 			System.out.println("\n\nNo Celebrity images vailable at this moment!!");
 		}
 	}
