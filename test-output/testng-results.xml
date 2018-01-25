@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="45150" started-at="2018-01-23T10:59:57Z" finished-at="2018-01-23T11:00:42Z">
+  <suite name="Default suite" duration-ms="36357" started-at="2018-01-25T11:12:05Z" finished-at="2018-01-25T11:12:41Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="45150" started-at="2018-01-23T10:59:57Z" finished-at="2018-01-23T11:00:42Z">
+    <test name="Default test" duration-ms="36357" started-at="2018-01-25T11:12:05Z" finished-at="2018-01-25T11:12:41Z">
       <class name="testclasses.Browse_Celebrity_Photos">
-        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:testclasses.Browse_Celebrity_Photos@29774679]" name="launchBrowser" is-config="true" duration-ms="6576" started-at="2018-01-23T16:29:57Z" finished-at="2018-01-23T16:30:04Z">
+        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:testclasses.Browse_Celebrity_Photos@29774679]" name="launchBrowser" is-config="true" duration-ms="6446" started-at="2018-01-25T16:42:05Z" finished-at="2018-01-25T16:42:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="goToHomePage()[pri:0, instance:testclasses.Browse_Celebrity_Photos@29774679]" name="goToHomePage" is-config="true" duration-ms="13503" started-at="2018-01-23T16:30:04Z" finished-at="2018-01-23T16:30:17Z">
+        <test-method status="PASS" signature="goToHomePage()[pri:0, instance:testclasses.Browse_Celebrity_Photos@29774679]" name="goToHomePage" is-config="true" duration-ms="4410" started-at="2018-01-25T16:42:11Z" finished-at="2018-01-25T16:42:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToHomePage -->
-        <test-method status="PASS" signature="browseCelebrityPhotos()[pri:0, instance:testclasses.Browse_Celebrity_Photos@29774679]" name="browseCelebrityPhotos" duration-ms="23248" started-at="2018-01-23T16:30:17Z" finished-at="2018-01-23T16:30:40Z">
+        <test-method status="PASS" signature="browseCelebrityPhotos()[pri:0, instance:testclasses.Browse_Celebrity_Photos@29774679]" name="browseCelebrityPhotos" duration-ms="23662" started-at="2018-01-25T16:42:15Z" finished-at="2018-01-25T16:42:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browseCelebrityPhotos -->
-        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:testclasses.Browse_Celebrity_Photos@29774679]" name="quitBrowser" is-config="true" duration-ms="1807" started-at="2018-01-23T16:30:40Z" finished-at="2018-01-23T16:30:42Z">
+        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:testclasses.Browse_Celebrity_Photos@29774679]" name="quitBrowser" is-config="true" duration-ms="1796" started-at="2018-01-25T16:42:39Z" finished-at="2018-01-25T16:42:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitBrowser -->

@@ -47,7 +47,7 @@ public class Movie_Detail_Page extends BasePage{
 		try {
 			if(movieTrailerImage.isDisplayed() == true){
 				movieTrailerImage.click();
-				waitTimer(driver, 30000);
+				waitTimer(driver, 35000);
 			}
 			else{
 				System.out.println("Movie Trailer is not present!!");

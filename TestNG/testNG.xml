@@ -3,8 +3,14 @@
 <suite name="Demo_suite" verbose="5"  preserve-order="true">
   <test name="General_test" >
   	<classes>
-      <class name="testclasses.Search_And_Open_Movie_Detail_Page"/>
-	  <class name="testclasses.Rate_Unrated_Movie"/>
+      <class name="testclasses.Create_New_Account_And_Login"/>
+	  <class name="testclasses.User_SignIn_To_Site"/>
+	  <class name="testclasses.Search_And_Open_Movie_Detail_Page"/>
+	  <class name="testclasses.Play_Movie_Trailer"/>
+	  <class name="testclasses.New_Movies_In_Theatre"/>
+	  <class name="testclasses.Compare_Movies_By_Rating"/>
+	  <class name="testclasses.Check_Movie_Rate_Status"/>
+	  <class name="testclasses.Browse_Celebrity_Photos"/>
     </classes>
  </test>
 </suite>

@@ -62,7 +62,7 @@ public class Home_Page extends BasePage {
 	@FindBy(css = "a[href='/movies-in-theaters/?ref_=nv_mv_inth_1']")
 	private WebElement moviesInTheatre;
 	
-	@FindBy(css = "img[src='https://images-na.ssl-images-amazon.com/images/M/MV5BMjMxNzM4MDE4MV5BMl5BanBnXkFtZTgwNjk4ODI2NDM@._CR435,122,1414,1059_UX614_UY460._SY230_SX307_AL_.jpg']")
+	@FindBy(css = "img[src='https://images-na.ssl-images-amazon.com/images/M/MV5BMjA5MTMwMDQyN15BMl5BanBnXkFtZTgwNzU4MzgyNDM@._V1_SX307_CR0,0,307,230_AL_.jpg']")
 	private List<WebElement> widgetImage;
 
 	public void inputTextToSearchBar(String searchQuery){
@@ -116,8 +116,13 @@ public class Home_Page extends BasePage {
 	}
 	
 	public void clickOnWidgetImage() {
-		widgetImage.get(0).click();
-		waitTimer(driver, 2000);
+		if(widgetImage.size() > 0) {
+			widgetImage.get(0).click();
+			waitTimer(driver, 2000);
+		}
+		else {
+			System.out.println("\n\nNo Celebrity images vailable at this moment!!");
+		}
 	}
 	
 	
