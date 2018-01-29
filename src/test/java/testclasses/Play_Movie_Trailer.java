@@ -18,7 +18,7 @@ public class Play_Movie_Trailer extends BaseTest {
 	
 	@Test
 	public void play_Movie_Trailer() throws Exception{
-		String SearchQuery = prop.getProperty("searchquery2");
+		String SearchQuery = prop.getProperty("searchquery1");
 		Home_Page homePage = new Home_Page(driver);
 		homePage.inputTextToSearchBar(SearchQuery.toLowerCase());
 		homePage.submitSearchQuery();

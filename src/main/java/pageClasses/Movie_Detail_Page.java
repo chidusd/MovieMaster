@@ -72,7 +72,7 @@ public class Movie_Detail_Page extends BasePage{
 	}
 	
 	public double getRatingGivenByUser() {
-		return Double.parseDouble(ratingGivenByUser.get(1).getText());
+		return Double.parseDouble(ratingGivenByUser.get(0).getText());
 	}
 	
 	public String isMovieRatedByUser() {
@@ -84,7 +84,8 @@ public class Movie_Detail_Page extends BasePage{
 			}
 		}
 		catch(NoSuchElementException e) {
-			message = "\nThis movie is already been rated by the user!!";
+			message = "\nThis movie is already been rated by the user!!"+
+					"\nUser has given a rating of: "+getRatingGivenByUser();
 		}
 		return message;
 	}
